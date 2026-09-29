@@ -8,11 +8,10 @@ public:
     }
     return num;
    }
-
     bool isSumEqual(string firstWord, string secondWord, string targetWord) {
         int a= isValue(firstWord);
         int b= isValue(secondWord);
-        int c=isValue(targetWord);
+        int c= isValue(targetWord);
         return a+b==c;
         
     }
