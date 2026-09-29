@@ -7,6 +7,7 @@ public:
         num=num*10+digit;
     }
     return num;
+    
    }
     bool isSumEqual(string firstWord, string secondWord, string targetWord) {
         int a= isValue(firstWord);
