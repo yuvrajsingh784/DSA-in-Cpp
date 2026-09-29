@@ -13,7 +13,7 @@ public:
             if(j>=0)
             sum+=num2[j--]-'0';
 
-            ans+=char('0'+(sum%10));
+            ans+=to_string(sum%10);
             carry=sum/10;
         }
         reverse(ans.begin(),ans.end());
