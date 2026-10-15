@@ -2,16 +2,18 @@
 class Solution {
 public:
     int sumCounts(vector<int>& nums) {
-        int n = nums.size();
-        int ans = 0;
+        int ans = 0, n = nums.size();
 
         for (int i = 0; i < n; i++) {
-            unordered_set<int> st;
+            bool seen[101] = {};
+            int distinct = 0;
 
             for (int j = i; j < n; j++) {
-                st.insert(nums[j]);
+                if (!seen[nums[j]]) {
+                    seen[nums[j]] = true;
+                    distinct++;
+                }
 
-                int distinct = st.size();
                 ans += distinct * distinct;
             }
         }
